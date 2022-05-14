@@ -6,10 +6,11 @@ class SessionController extends CI_Controller {
 		parent::__construct();
         if(!$this->session->has_userdata('user')){
             redirect(site_url('loginController/login'));
-        }else{
-            $this->session->set_userdata('userExist','0');
-            redirect(site_url('loginController/verifyLogin'));
         }
+        // else{
+        //     $this->session->set_userdata('userExist','0');
+        //     redirect(site_url('loginController/verifyLogin'));
+        // }
 	}
 }
 ?>
