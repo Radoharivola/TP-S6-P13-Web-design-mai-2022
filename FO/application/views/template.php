@@ -5,10 +5,10 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="<?php echo $title; ?>" />
+  <meta name="author" content="me">
 
-  <title>Info Climat</title>
+  <title><?php echo $title; ?></title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,43 +25,41 @@
 <body>
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">InfoClimat</span>
-    <span class="site-heading-lower">IC</span>
+    <span class="site-heading-upper text-primary mb-3"><?php echo $h1upper; ?></span>
+    <span class="site-heading-lower"><?php echo $h1lower; ?></span>
   </h1>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
-          </li>
-          <li class="nav-item px-lg-4">
+          <?php if (isset($accueil)) { ?><li class="nav-item active px-lg-4"><?php }else{ ?><li class="nav-item px-lg-4"><?php } ?>
+            <a class="nav-link text-uppercase text-expanded" href="<?php echo base_url(); ?>baseController/index">Accueil</a>
+            </li>
+            <?php if (isset($articles)) { ?><li class="nav-item active px-lg-4"><?php }else{ ?><li class="nav-item px-lg-4"><?php } ?>
+              <a class="nav-link text-uppercase text-expanded" href="<?php echo base_url(); ?>baseController/articles">Articles</a>
+              </li>
+              <?php if (isset($about)) { ?><li class="nav-item active px-lg-4"><?php }else{ ?><li class="nav-item px-lg-4"><?php } ?>
+                <a class="nav-link text-uppercase text-expanded" href="<?php echo base_url(); ?>baseController/about">A propos</a>
+                </li>
+                <!-- <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
   </nav>
 
-  <?php include('accueil'.'.php') ?>
+  <?php if (isset($link)) include($link . '.php') ?>
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 small">Copyright &copy; Your Website 202</p>
     </div>
   </footer>
 

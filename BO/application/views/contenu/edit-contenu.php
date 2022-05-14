@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php echo site_url(); ?>manage-contenu">Gérer Contenu</a></li>
         <li><a href="<?php echo site_url(); ?>add-contenu">Ajouter Contenu</a></li>
-        <li><a href="loginController/deco">Se déconnecter</a></li>
+        <li><a href="<?php echo base_url(); ?>loginController/deco">Se déconnecter</a></li>
 
       </ul>
     </div>
@@ -32,17 +32,17 @@
       <input type="hidden" value="<?php echo $contenu[0]->id ?>" name="contenu_id">
 
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="dateajout">Dateajout:</label>
         <textarea class="form-control" id="dateajout" name="dateajout">     <?php echo $contenu[0]->dateajout ?>       </textarea>
-      </div>
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <textarea class="form-control" id="title" name="title">     <?php echo $contenu[0]->title ?>       </textarea>
-      </div>
+      </div> -->
       <div class="form-group">
         <label for="texte">Texte:</label>
-        <input type="text" value="<?php echo $contenu[0]->texte ?>" class="form-control" id="texte" name="texte">
+        <textarea class="form-control" id="texte" name="texte">     <?php echo $contenu[0]->texte ?>       </textarea>
+      </div>
+      <div class="form-group">
+        <label for="title">title:</label>
+        <input type="text" value="<?php echo $contenu[0]->title ?>" class="form-control" id="title" name="title">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -24,7 +24,7 @@
                             <div class="p-5">
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Administrateur</h1>
-                                    <h5 style="color: red;"><?php if (isset($error)) echo $error; ?>    </h5>
+                                    <h5 style="color: red;"><?php if (isset($error)) echo $error; ?> </h5>
 
                                 </div>
                                 <form class="user" action="<?php echo site_url('LoginController/verifyLogin'); ?>" method="post">
@@ -41,11 +41,11 @@
                                         </div>
                                     </div>
                                     <input type="submit" value="se connecter" class="btn btn-primary btn-user btn-block">
+                                    <br>
                                 </form>
-                                <!-- <hr>
                                 <div class="text-center">
-                                    <a class="small" href="<?php echo site_url('inscriptionController/inscription'); ?>">S'inscrire</a>
-                                </div> -->
+                                    <a class="small" href="http://[::1]/my-app/climat/FO/">Front</a>
+                                </div>
                             </div>
                         </div>
                     </div>

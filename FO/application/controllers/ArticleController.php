@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class Welcome extends CI_Controller
+class ArticleController extends CI_Controller
 {
 
     /**
@@ -26,7 +26,25 @@ class Welcome extends CI_Controller
     {
         $data = array();
         $this->load->model('Contenu');
-        $data['article'] = $this->Article->getArticle($title, $texte);
-        $this->load->view('test', $data);
+        $data['article'] = $this->Contenu->getArticle($title, $texte);
+        $data['link']='fiche';
+
+        $data['title']=$data['article']->title;
+		$data['h1upper']=$data['article']->title;
+		$data['h1lower']='info Climat';
+
+        $this->load->view('template', $data);
+    }
+    public function ficheById($texte, $id)
+    {
+        $data = array();
+        $data['id']=$id;
+        $this->load->model('Contenu');
+        $data['article'] = $this->Contenu->getById($id);
+        $data['link']='fiche';
+        $data['title']=$data['article']->title;
+		$data['h1upper']=$data['article']->title;
+		$data['h1lower']='info Climat';
+        $this->load->view('template', $data);
     }
 }
