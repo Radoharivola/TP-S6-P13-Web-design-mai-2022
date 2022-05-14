@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
-class ContenuController extends CI_Controller {
+require('SessionController.php');
+class ContenuController extends SessionController {
 
     public function __construct() {
         parent::__construct();

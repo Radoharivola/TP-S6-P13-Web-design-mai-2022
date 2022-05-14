@@ -18,6 +18,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo site_url(); ?>manage-contenu">Gérer Contenu</a></li>
                 <li class="active"><a href="<?php echo site_url(); ?>add-contenu">Ajouter Contenu</a></li>
+                <li><a href="loginController/deco">Se déconnecter</a></li>
+
             </ul>
         </div>
     </nav>
@@ -31,7 +33,7 @@
 
                 <!-- <textarea  class="form-control" id="dateajout" name="dateajout"></textarea> -->
             </div>
-            
+
             <div class="form-group">
                 <label for="titre">Titre:</label>
                 <input type="text" class="form-control" id="titre" name="title">

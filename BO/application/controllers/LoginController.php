@@ -27,9 +27,14 @@ class LoginController extends CI_Controller
 			$data['login'] = 'Login';
 		} else {
 			$this->session->set_userdata('userExist', '0');
-			redirect(site_url('loginController/verifyLogin'));
+			redirect(site_url('ContenuController/manageContenu'));
 		}
 		$this->load->view('template', $data);
+	}
+	public function deco()
+	{
+		$this->session->sess_destroy();
+		redirect(site_url('loginController/login'));
 	}
 	public function verifyLogin()
 	{
@@ -40,16 +45,16 @@ class LoginController extends CI_Controller
 			$this->load->model('Utilisateur');
 			$result = $this->Utilisateur->login($email, $password);
 			if ($result['etat']) {
-				$data['user'] = $this->session->userdata('user');
-				$data['view'] = 'accueil';
+				redirect(site_url('ContenuController/manageContenu'));
 			} else {
 				$data['view'] = 'login';
 				$data['error'] = $result['message'];
 				$data['login'] = 'Login';
+				$this->load->view('template', $data);
 			}
 		} else {
 			$data['view'] = 'accueil';
+			$this->load->view('template', $data);
 		}
-		$this->load->view('template', $data);
 	}
 }
