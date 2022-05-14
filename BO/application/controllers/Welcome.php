@@ -30,10 +30,5 @@ class Welcome extends SessionController
 		$this->load->view('accueil');
 
 	}
-	public function accueil()
-	{
-		$this->load->view('accueil');
-
-	}
 	
 }

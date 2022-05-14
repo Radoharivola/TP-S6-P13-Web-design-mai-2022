@@ -52,3 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// routes for contenu.
+$route['manage-contenu']="ContenuController/ManageContenu";
+$route['change-status-contenu/(:num)']="ContenuController/changeStatusContenu/$1";
+$route['edit-contenu/(:num)']="ContenuController/editContenu/$1";
+$route['edit-contenu-post']="ContenuController/editContenuPost";
+$route['delete-contenu/(:num)']="ContenuController/deleteContenu/$1";
+$route['add-contenu']="ContenuController/addContenu";
+$route['add-contenu-post']="ContenuController/addContenuPost";
+$route['view-contenu/(:num)']="ContenuController/viewContenu/$1";
+// end of contenu routes

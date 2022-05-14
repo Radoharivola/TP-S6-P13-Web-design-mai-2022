@@ -23,29 +23,29 @@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Administrateur</h1>
                                     <h5 style="color: red;"><?php if (isset($error)) echo $error; ?>    </h5>
 
                                 </div>
                                 <form class="user" action="<?php echo site_url('LoginController/verifyLogin'); ?>" method="post">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" required>
+                                        <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="login" name="email" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
+                                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="mot de passe" name="password">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck" name="su">
-                                            <label class="custom-control-label" for="customCheck">Super utilisateur</label>
+                                            <!-- <input type="checkbox" class="custom-control-input" id="customCheck" name="su"> -->
+                                            <!-- <label class="custom-control-label" for="customCheck">Super utilisateur</label> -->
                                         </div>
                                     </div>
-                                    <input type="submit" value="login" class="btn btn-primary btn-user btn-block">
+                                    <input type="submit" value="se connecter" class="btn btn-primary btn-user btn-block">
                                 </form>
-                                <hr>
+                                <!-- <hr>
                                 <div class="text-center">
                                     <a class="small" href="<?php echo site_url('inscriptionController/inscription'); ?>">S'inscrire</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
