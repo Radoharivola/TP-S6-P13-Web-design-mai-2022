@@ -6,3 +6,6 @@ Backoffice: http://infoclimat.infinityfreeapp.com/BO/
 Login BO: admin
 mdp: admin
 ETU 1118
+
+premier test sur google page speed: 89
+
