@@ -4,6 +4,8 @@ class Contenu extends CI_Model
 {
     function getArticle($title,$texte)
     {
+        $this->db->cache_on();
+
         $this->db->select('*');
         $this->db->from('contenu');
         // $this->db->join('tbl_lining', 'products.lining=tbl_lining.id', 'left');
@@ -16,6 +18,8 @@ class Contenu extends CI_Model
     }
     function getById($id)
     {
+        $this->db->cache_on();
+
         $this->db->select('*');
         $this->db->from('contenu');
         // $this->db->join('tbl_lining', 'products.lining=tbl_lining.id', 'left');
@@ -27,6 +31,7 @@ class Contenu extends CI_Model
     }
     function getAll()
     {
+        $this->db->cache_on();
         $this->db->select('*');
         $this->db->from('contenu');
         // $this->db->join('tbl_lining', 'products.lining=tbl_lining.id', 'left');
