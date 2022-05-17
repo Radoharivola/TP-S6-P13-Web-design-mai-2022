@@ -30,6 +30,8 @@ class BaseController extends CI_Controller
 		$data['h1lower']='info Climat';
 		$this->load->model('Contenu');
 		$data['all']=$this->Contenu->getAll();
+		
+		$this->output->cache(10);
 		$this->load->view('template',$data);
 	}
 	public function about()
@@ -53,6 +55,7 @@ class BaseController extends CI_Controller
 		$this->load->model('Contenu');
         $data['all'] = $this->Contenu->getAll();
 		$data['articles']='0';
+		$this->output->cache(10);
 		$this->load->view('template',$data);
 	}
 }

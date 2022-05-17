@@ -33,6 +33,7 @@ class ArticleController extends CI_Controller
 		$data['h1upper']=$data['article']->title;
 		$data['h1lower']='info Climat';
 
+		$this->output->cache(10);
         $this->load->view('template', $data);
     }
     public function ficheById($texte, $id)
@@ -45,6 +46,8 @@ class ArticleController extends CI_Controller
         $data['title']=$data['article']->title;
 		$data['h1upper']=$data['article']->title;
 		$data['h1lower']='info Climat';
+        
+		$this->output->cache(10);
         $this->load->view('template', $data);
     }
 }
