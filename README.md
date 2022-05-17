@@ -9,7 +9,7 @@ ETU 1118
 
 premier test sur google page speed: 88
 
+reduction de la taille des images
 mise en cache des fichiers médias
-cache au niveau de la base de données
-
+cache au niveau server
 resultat après les modifications: 97
