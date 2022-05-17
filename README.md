@@ -12,4 +12,4 @@ premier test sur google page speed: 88
 mise en cache des fichiers médias
 cache au niveau de la base de données
 
-mais le résultat reste le même
+resultat après les modifications: 97
