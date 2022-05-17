@@ -11,5 +11,5 @@ premier test sur google page speed: 88
 
 reduction de la taille des images
 mise en cache des fichiers médias
-cache au niveau server
+activation de la mise en cache côté server 
 resultat après les modifications: 97
